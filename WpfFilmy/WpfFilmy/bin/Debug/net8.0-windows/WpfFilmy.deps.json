@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "WpfFilmy/1.0.0": {
+        "runtime": {
+          "WpfFilmy.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WpfFilmy/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

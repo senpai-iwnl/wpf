@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfFilmy.Windows.FilmDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfFilmy.Windows"
+        mc:Ignorable="d"
+        Title="Szczegóły Filmu" Height="350" Width="400"
+        WindowStartupLocation="CenterOwner" Loaded="Window_Loaded">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Tytuł:"/>
+        <TextBox x:Name="titleTextBox" Grid.Row="0" Grid.Column="1" Margin="0,0,0,5"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Data Premiery:"/>
+        <DatePicker x:Name="releaseDatePicker" Grid.Row="1" Grid.Column="1" Margin="0,0,0,5"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Opis:" VerticalAlignment="Top"/>
+        <TextBox x:Name="descriptionTextBox" Grid.Row="2" Grid.Column="1" Margin="0,0,0,5" Height="100" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+
+        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+        <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="okButton" Content="OK" Width="75" Margin="0,0,5,0" Click="okButton_Click" IsDefault="True"/>
+            <Button x:Name="cancelButton" Content="Anuluj" Width="75" Click="cancelButton_Click" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
